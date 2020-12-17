@@ -3,12 +3,9 @@
 ## 使い方
 - [CLI](https://zenn.dev/zenn/articles/zenn-cli-guide) /  [画像upload先](https://zenn.dev/dashboard/uploader)
 
-
-## local 検証
+## local preview
 ```
-docker build -t zenn-preview .
-docker run -d -p 8000:8000 -t zenn-preview
-# access to http://localhost:8000
+npx zenn preview
 ```
 
 ## 限定公開
@@ -30,7 +27,7 @@ gcloud run deploy zenn-preview \
   --region asia-northeast1
 ```
 
-## 公開削除
+## 限定公開削除
 ```
 gcloud run services delete zenn-preview \
   --platform managed \
