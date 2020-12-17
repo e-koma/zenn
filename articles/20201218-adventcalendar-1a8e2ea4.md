@@ -3,7 +3,7 @@ title: "あと2時間でElastiCacheのメモリが枯渇！そのときあなた
 emoji: "🔥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["aws", "rds", "elasticache", "ec2", "ecs"]
-published: false
+published: true
 ---
 
 :::message
