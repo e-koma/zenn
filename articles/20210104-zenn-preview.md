@@ -1,6 +1,6 @@
 ---
 title: "Zennの記事を限定公開する方法"
-emoji: "🔖"
+emoji: "✏️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ['zenn', 'gcp', 'cloudrun']
 published: true
