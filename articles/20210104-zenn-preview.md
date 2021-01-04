@@ -31,7 +31,7 @@ published: true
 以下のDockerfileを用意します。 Zenn CLIのinstall手順およびpreviewをそのままDockerfile化しただけです。 Dockerfileは一度用意してしまえば、今後触れることはほとんどありません。
 
 ```dockerfile
-FROM node:current-alpine3.12
+FROM node:lts-alpine3.12
 
 WORKDIR /app
 RUN apk add --no-cache --virtual .build-deps git \
@@ -102,4 +102,4 @@ gcloud container images delete "gcr.io/$GCLOUD_PROJECT/zenn-preview"
 ZennとGitHub連携をして、 記事のオプションを `published: true` にしてgit pushしましょう
 
 # まとめ
-Zennには限定公開機能がありませんが、Cloud Runにデプロイすることで限定公開機能を実現する話を書きました。 Cloud Runはこういう用途には非常に便利ですね。 
+Zennには限定公開機能がありませんが、Cloud Runにデプロイすることで限定公開機能を実現する話を書きました。 Cloud Runはこういう用途には非常に便利ですね。

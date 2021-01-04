@@ -1,4 +1,4 @@
-FROM node:current-alpine3.12
+FROM node:lts-alpine3.12
 
 WORKDIR /app
 RUN apk add --no-cache --virtual .build-deps git \
