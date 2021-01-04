@@ -3,7 +3,7 @@ title: "Zennの記事を限定公開する方法"
 emoji: "🔖"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ['zenn', 'gcp', 'cloudrun']
-published: false
+published: true
 ---
 
 # Zennは限定公開機能がない
@@ -31,7 +31,7 @@ published: false
 以下のDockerfileを用意します。 Zenn CLIのinstall手順およびpreviewをそのままDockerfile化しただけです。 Dockerfileは一度用意してしまえば、今後触れることはほとんどありません。
 
 ```dockerfile
-FROM node:15.5.0-alpine3.12
+FROM node:current-alpine3.12
 
 WORKDIR /app
 RUN apk add --no-cache --virtual .build-deps git \
