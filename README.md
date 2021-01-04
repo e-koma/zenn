@@ -3,6 +3,11 @@
 ## 使い方
 - [CLI](https://zenn.dev/zenn/articles/zenn-cli-guide) /  [画像upload先](https://zenn.dev/dashboard/uploader)
 
+## 記事作成
+```
+npx zenn new:article --slug "<slug名>" --type tech
+```
+
 ## local preview
 ```
 npx zenn preview
@@ -19,7 +24,8 @@ gcloud auth configure-docker
 docker build -t "gcr.io/$GCLOUD_PROJECT/zenn-preview" .
 docker push "gcr.io/$GCLOUD_PROJECT/zenn-preview"
 
-gcloud run deploy zenn-preview \
+service_name="zenn-preview-$(uuidgen | tr [:upper:] [:lower:])"
+gcloud run deploy "$service_name" \
   --image "gcr.io/$GCLOUD_PROJECT/zenn-preview" \
   --port 8000 \
   --platform managed \
@@ -29,7 +35,9 @@ gcloud run deploy zenn-preview \
 
 ## 限定公開削除
 ```
-gcloud run services delete zenn-preview \
+gcloud run services delete "$service_name" \
   --platform managed \
   --region asia-northeast1
+
+gcloud container images delete "gcr.io/$GCLOUD_PROJECT/zenn-preview"
 ```
