@@ -3,6 +3,13 @@
 ## 使い方
 - [CLI](https://zenn.dev/zenn/articles/zenn-cli-guide) /  [画像upload先](https://zenn.dev/dashboard/uploader)
 
+## 初期セットアップ
+Zennコンテンツを管理したいディレクトリ配下で
+```
+npm init --yes
+npm install zenn-cli
+```
+
 ## 記事作成
 ```
 npx zenn new:article --slug "<slug名>" --type tech
