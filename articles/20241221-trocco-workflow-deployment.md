@@ -3,6 +3,7 @@ title: "1000 GB 以上のメモリ削減！TROCCO ワークフローの安全な
 emoji: "🎄"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Kubernetes", "EKS", "AWS", "SRE", "DevOps"]
+publication_name: "primenumber"
 published: true
 ---
 
