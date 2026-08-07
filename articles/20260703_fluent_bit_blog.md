@@ -274,7 +274,7 @@ Lua スクリプトで、multiline 化した後のログサイズが 200KB よ�
 
 最終的には以下のようなフィルターパイプラインになりました。
 
-![](https://static.zenn.studio/user-upload/d2dff1af9549-20260807.png =250x)
+![](https://static.zenn.studio/user-upload/d2dff1af9549-20260807.png =400x)
 
 ## 成果
 
