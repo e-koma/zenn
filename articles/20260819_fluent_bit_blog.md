@@ -3,6 +3,7 @@ title: "Fluent Bit のチューニングで CloudWatch Logs のコストを月50
 emoji: "📉"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["AWS", "CloudWatch Logs", "Fluent Bit", "Kubernetes", "EKS"]
+publication_name: "primenumber"
 published: false
 ---
 
