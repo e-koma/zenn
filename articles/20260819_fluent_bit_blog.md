@@ -17,10 +17,10 @@ Fluent Bit の Kubernetes フィルタが付与するメタデータはデータ
 
 [TROCCO](https://trocco.io) は顧客のデータ転送を 1 日 25 万回以上実行する ETL プラットフォームです。
 
-以前から CloudWatch Logs のコストが高い課題感があり、コスト課題に取り組んだところ、いくつかの改善の積み重ねで **100 万円/月** コスト削減ができました。(ドル円 160 円換算)
+以前から CloudWatch Logs のコストが高い課題感があり、コスト課題に取り組んだところ、いくつかの改善の積み重ねで **80% 以上（100 万円/月）** のコスト削減ができました。(ドル円 160 円換算)
 本記事はそのうち、Fluent Bit で月 50 万円削減した話です。
 
-![](https://static.zenn.studio/user-upload/2365e94817ab-20260814.png)
+![](https://static.zenn.studio/user-upload/780975299f7e-20260819.png)
 *CloudWatch Logs のみを選択した Cost Explorer の図*
 
 
@@ -123,7 +123,13 @@ k8s のメタデータを削り、1 行のサイズを制限したとはいえ�
 
 複数行に対して k8s メタデータが 1 回だけ付与されるため、k8s メタデータの送信量がさらに減ります。
 
-![](https://static.zenn.studio/user-upload/f5511e29aa87-20260807.png)
+#### 修正前の CloudWatch Logs
+![](https://static.zenn.studio/user-upload/826c3d0d1569-20260819.png)
+*1 回のログ出力で CloudWatch Logs の 1 イベントになり、その都度 k8s メタデータが付与される*
+
+#### 修正後の CloudWatch Logs
+![](https://static.zenn.studio/user-upload/ad26f7e4fbe0-20260819.png)
+*複数行を 1 イベントにまとめ、k8s メタデータは複数行に 1 回だけになる*
 
 設定は以下のとおりです。
 
